@@ -5,4 +5,12 @@ var obj = {
 }
 function removeNumbersLargerThan(num, obj) {
     // your code here
+    for (var key in obj){
+        if (obj[key] > num){
+            delete obj[key];
+        }
+    }
+    return obj
 }
+removeNumbersLargerThan(5, obj);
+console.log(obj); // --> { b: 2, c: 'montana' }

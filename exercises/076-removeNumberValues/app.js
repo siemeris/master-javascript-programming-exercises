@@ -5,6 +5,13 @@ var obj = {
 };
 function removeNumberValues(obj) {
     // your code here
+    for (var key in obj){
+        //if (Number.isInteger(obj[key])){
+        if (typeof obj[key] === 'number'){
+            delete obj[key];
+        } //también valdría con typeof === 'number'
+    }
+return obj
 }
 
 removeNumberValues(obj);

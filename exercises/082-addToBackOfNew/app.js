@@ -1,5 +1,8 @@
 function addToBackOfNew(arr, element) {
     // Write your function here
+    var newArray = arr.slice();
+    newArray.push(element);
+    return newArray
 }
 
 var input = [1, 2];
