@@ -8,3 +8,4 @@ function isOldEnoughToDrive(age) {
   }
 }
 console.log(isOldEnoughToDrive(15));
+

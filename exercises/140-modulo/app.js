@@ -15,5 +15,5 @@ function modulo(num1, num2) {
     return resto
 }
 
-var output = modulo(-25, 4);
+var output = modulo(-25, 2);
 console.log(output); // --> 1
