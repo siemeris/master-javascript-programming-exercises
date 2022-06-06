@@ -1,10 +1,10 @@
 function search(array, value) {
   var indIni = 0;
-  var indFin = array.length; 
-  var indMedio = Math.floor(((indFin - indIni)) / 2);
+  var indFin = array.length-1; 
+  var indMedio = indIni + (indFin - indIni) / 2;
 
   // your code here
-  if (value > array[indFin-1] || value < array [indIni]) {
+  if (value > array[indFin] || value < array [indIni]) {
     return null
   }
   while (indIni <= indFin) {
@@ -13,15 +13,15 @@ function search(array, value) {
       }
       else if (array[indMedio]<value){
         indFin = array.length-1;
-        indIni = indMedio;
+        indIni = indMedio+1;
         indMedio = indIni + Math.floor(((indFin - indIni)) / 2);
       }
       else if (array[indMedio]>value){
-        indFin = indMedio;
+        indFin = indMedio-1;
         indMedio = indIni + Math.floor(((indFin - indIni)) / 2);
       }
       }
 }
 
 var arr = [1, 3, 16, 22, 31, 33, 34]
-console.log(search(arr, 34)); // => 4
+console.log(search(arr, 1)); // => 4
